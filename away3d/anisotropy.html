@@ -33,7 +33,29 @@
 </head>
 <body>
 	<div id="text">
-		Anisotropy filtering - <a href="https://en.wikipedia.org/wiki/Anisotropic_filtering">wiki page</a>
+		Anisotropy filtering - <a href="https://en.wikipedia.org/wiki/Anisotropic_filtering">wiki page</a></br>
+		
+		<code >
+			<pre lang="Action Script3">			
+	Using -
+                                                                                                                                              //Here anisotropy
+	public function TextureMaterial(texture:Texture2DBase = null, smooth:Boolean = true, repeat:Boolean = false, mipmap:Boolean = true, anisotropy:int = Anisotropy.NONE)
+
+	public class Anisotropy 
+	{
+		
+		public static const NONE:int = 0; //None anisotropy so we will use linear filtering
+		public static const ANISOTROPIC2X:int = 1;
+		public static const ANISOTROPIC4X:int = 2;
+		public static const ANISOTROPIC8X:int = 3;
+		public static const ANISOTROPIC16X:int = 4;
+		
+	}
+
+	var material:TextureMaterial = new TextureMaterial(texture, true, true, true, Anisotropy.NONE);
+	material.anisotropy = Anisotropy.ANISOTROPIC8X;//Cause invalidate shader programm
+			</pre>
+		</code>
 	</div>
 	<div id="altContent">
 		<h1>anisotropy</h1>
