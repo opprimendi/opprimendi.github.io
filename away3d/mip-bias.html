@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Mip-bias</title>
+	<meta name="description" content="" />
+	
+	<script src="../js/swfobject.js"></script>
+	<script>
+		var flashvars = {
+		};
+		var params = {
+			menu: "false",
+			scale: "noScale",
+			allowFullscreen: "true",
+			allowScriptAccess: "always",
+			bgcolor: "",
+			wmode: "direct" // can cause issues with FP settings & webcam
+		};
+		var attributes = {
+			id:"mip-bias.swf"
+		};
+		swfobject.embedSWF(
+			"mip-bias.swf", 
+			"altContent", "800", "600", "17.0.0", 
+			"../expressInstall.swf", 
+			flashvars, params, attributes);
+	</script>
+
+</head>
+<body>
+	<div id="text">
+		<p align="center">Mip-bias -  Mip-Mapping Bias offsets the Mip-Map level from which a texture is sampled. Negative values indicate a larger Mip-Map level (bigger texture); a positive value indicates a smaller Mip-Map level (smaller texture). This is evident at the top of the images below:</p>
+		<div align="center"> <img align="center" width="350" src="mip-map-diagram.jpg"> </div>
+		<p align="center">The example below shows the effect on a render when increasing the Mip-Mapping bias:</p>
+		<div class="" align="center"> 
+			<table>
+				<tr>
+					<td style="width: 299px">
+						<img border='0' src='mipmap_bias_0.png' width='299' height='300' >
+					</td>
+				   
+					<td style="width: 299px">
+						<img border='0' src='mipmap_bias_1.png' width='299' height='300' >
+					</td>
+					
+					<td style="width: 299px">
+						<img border='0' src='mipmap_bias_2.png' width='299' height='300' >
+					</td>
+				</tr>
+					
+				<tr>
+					<td style="width: 299px">
+						<div>Mipmap Bias 0</div>
+					</td>
+					<td style="width: 299px">
+						<div>Mipmap Bias 1</div>
+					</td>
+					<td style="width: 299px">
+						<div>Mipmap Bias 2</div>
+					</td>
+				</tr>
+             </table>
+		</div>
+	</div>
+	<div id="content" align="center">
+		<div id="altContent" style="height: 600px">
+			<h1>Mip-bias</h1>
+			<p><a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash player</a></p>
+		</div>
+	</div>
+</body>
+</html>
