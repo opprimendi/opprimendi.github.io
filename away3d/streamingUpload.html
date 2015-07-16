@@ -43,6 +43,14 @@
 	Using -
 	var texture:BitmapTexture = new BitmapTexture(bitmapData);
 	texture.isUseStreamingUpload = true;
+	
+	//Work with cube textures
+	var skyboxTexture:BitmapCubeTexture = new BitmapCubeTexture(new sky_posX().bitmapData, new sky_negX().bitmapData, new sky_posY().bitmapData,
+																		new sky_negY().bitmapData, new sky_posZ().bitmapData, new sky_negZ().bitmapData, true);
+	skyboxTexture.isUseStreamingUpload = true;
+	
+	var skyboxMaterial:SkyBoxMaterial = new SkyBoxMaterial(skyboxTexture);
+	var skybox:SkyBox = new SkyBox(skyboxMaterial);
 			</pre>
 		</code>
 	</div>
